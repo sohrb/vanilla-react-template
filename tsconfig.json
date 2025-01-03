@@ -8,9 +8,13 @@
     "strict": true,
 
     // Modules
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "resolveJsonModule": true,
 
     // Emit
@@ -21,6 +25,7 @@
     "verbatimModuleSyntax": true,
 
     // Language and Environment
+    "jsx": "react-jsx",
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "moduleDetection": "force",
     "target": "ES2023",
