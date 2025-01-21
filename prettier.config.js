@@ -1,6 +1,5 @@
 /** @type {import("prettier").Config} */
 const config = {
-  plugins: ["prettier-plugin-packagejson"],
   overrides: [
     {
       files: "*.svg",
@@ -9,6 +8,7 @@ const config = {
       },
     },
   ],
+  plugins: ["prettier-plugin-packagejson"],
 };
 
 export default config;

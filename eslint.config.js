@@ -1,10 +1,10 @@
 import js from "@eslint/js";
 import prettier from "eslint-config-prettier";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
 import ts from "typescript-eslint";
 
 const config = ts.config(
@@ -25,36 +25,30 @@ const config = ts.config(
     },
   },
   {
-    files: ["**/*.js"],
     extends: [ts.configs.disableTypeChecked],
+    files: ["**/*.js"],
   },
   {
-    plugins: {
-      "simple-import-sort": simpleImportSort,
-    },
-    rules: {
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
-    },
+    extends: [perfectionist.configs["recommended-natural"]],
   },
   {
-    files: ["src/**/*"],
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
     extends: [
       react.configs.flat.recommended,
       react.configs.flat["jsx-runtime"],
       reactRefresh.configs.vite,
       jsxA11y.flatConfigs.recommended,
     ],
+    files: ["src/**/*"],
     plugins: {
       "react-hooks": reactHooks,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
   },
   prettier,
