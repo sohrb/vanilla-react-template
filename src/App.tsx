@@ -1,5 +1,5 @@
-import "@/styles/globals.css";
+import "./styles/globals.css";
 
-export function App() {
+export default function App() {
   return <></>;
 }
