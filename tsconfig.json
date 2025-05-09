@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // Type Checking
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+
+    // Modules
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+
+    // Emit
+    "noEmit": true,
+
+    // Interop Constraints
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+
+    // Language and Environment
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "moduleDetection": "force",
+    "target": "ES2024",
+
+    // Output Formatting
+    "noErrorTruncation": true,
+
+    // Completeness
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
