@@ -8,11 +8,17 @@
   },
   "type": "module",
   "scripts": {
-    "format": "prettier --write"
+    "build": "vite build",
+    "clean": "rimraf ./dist",
+    "dev": "vite",
+    "format": "prettier --write",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
-    "prettier-plugin-packagejson": "^2.5.11"
+    "prettier-plugin-packagejson": "^2.5.11",
+    "rimraf": "^6.0.1",
+    "vite": "^6.3.5"
   },
   "packageManager": "pnpm@10.10.0"
 }
