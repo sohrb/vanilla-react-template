@@ -3,7 +3,6 @@ import prettier from "eslint-config-prettier";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
 import tseslint from "typescript-eslint";
 
 const config = tseslint.config(
@@ -25,15 +24,6 @@ const config = tseslint.config(
   {
     files: ["**/*.js"],
     extends: [tseslint.configs.disableTypeChecked],
-  },
-  {
-    plugins: {
-      "simple-import-sort": simpleImportSort,
-    },
-    rules: {
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
-    },
   },
   {
     files: ["src/**/*"],

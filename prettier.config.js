@@ -1,6 +1,9 @@
 /** @type {import("prettier").Config} */
 const config = {
-  plugins: ["prettier-plugin-packagejson"],
+  plugins: [
+    "prettier-plugin-packagejson",
+    "@ianvs/prettier-plugin-sort-imports",
+  ],
   overrides: [
     {
       files: "*.svg",
