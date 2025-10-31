@@ -54,6 +54,9 @@ importers:
       eslint-plugin-react-hooks:
         specifier: ^5.2.0
         version: 5.2.0(eslint@9.38.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.24
+        version: 0.4.24(eslint@9.38.0)
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -994,6 +997,11 @@ packages:
     peerDependencies:
       eslint: ^9.38.0
       typescript: ^5.9.3
+
+  eslint-plugin-react-refresh@0.4.24:
+    resolution: {integrity: sha512-nLHIW7TEq3aLrEYWpVaJ1dRgFR+wLDPN8e8FpYAql/bMV2oBEfC37K0gLEGgv9fy66juNShSMV8OkTqzltcG/w==}
+    peerDependencies:
+      eslint: '>=8.40'
 
   eslint-plugin-react-web-api@2.2.4:
     resolution: {integrity: sha512-ZdGQkDBFp9wjnoqj3xPhIzfDv07wFMYdd+uwg94xl3Zya5G+d+oUduPvSu4Du+ei6hyeWngua0njUQ8BmppyjQ==}
@@ -2935,6 +2943,10 @@ snapshots:
       typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
+
+  eslint-plugin-react-refresh@0.4.24(eslint@9.38.0):
+    dependencies:
+      eslint: 9.38.0
 
   eslint-plugin-react-web-api@2.2.4(eslint@9.38.0)(typescript@5.8.3):
     dependencies:
